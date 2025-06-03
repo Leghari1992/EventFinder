@@ -50,7 +50,7 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  background: url("../images/two.jpg") center center / cover no-repeat;
+  background: url("../images/two.jpeg") center center / cover no-repeat;
   min-height: 60vh;
   padding: 3rem 1rem;
   display: flex;
