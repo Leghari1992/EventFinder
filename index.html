@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Featured Events</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="images/logo7.png" alt="Logo" height="40" />
+          <span class="ms-2">EventFinder</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Discover Events Near You</h1>
+    </section>
+
+    <section
+      class="intro text-center px-4"
+      style="max-width: 800px; margin: 1.5rem auto; color: #d1d5db"
+    >
+      <h3>Welcome to EventFinder!!</h3>
+      <p style="font-size: 1.2rem; line-height: 1.6">
+        Your ultimate destination to discover, explore, and register for
+        exciting events happening all around you. Whether you're interested in
+        tech conferences, cultural festivals, or local meetups, we've got you
+        covered!
+      </p>
+    </section>
+
+    <!-- Search Section -->
+    <div class="container">
+      <div class="search-section text-center">
+        <h3>Find the Perfect Event</h3>
+        <div class="input-group justify-content-center">
+          <span class="input-group-text bg-white" id="search-icon">
+            <i class="bi bi-search"></i>
+          </span>
+          <input
+            type="text"
+            id="searchInput"
+            class="form-control w-50"
+            placeholder="Search events by name..."
+            aria-label="Search events"
+            aria-describedby="search-icon"
+            style="color: #212529; background-color: #fff"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5 featured-events-section">
+      <div class="section-heading-wrapper">
+        <h2 class="section-heading">Featured Events</h2>
+      </div>
+      <div class="event-carousel-wrapper position-relative">
+        <button class="carousel-arrow left-arrow">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <div
+          class="event-carousel d-flex flex-nowrap overflow-auto px-5"
+          id="featuredEventsContainer"
+        ></div>
+
+        <button class="carousel-arrow right-arrow">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer mt-5">
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <div class="col-md-4">
+            <h5>About EventFinder</h5>
+            <p>
+              Connecting you with the best events happening around you. Stay in
+              the loop!
+            </p>
+          </div>
+          <div class="col-md-4 footer-link">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Register</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contact</h5>
+            <p><i class="bi bi-geo-alt-fill me-2"></i> Islamabad, Pakistan</p>
+            <p><i class="bi bi-phone-fill me-2"></i> +92 300 1234567</p>
+            <p>
+              <i class="bi bi-envelope-fill me-2"></i> eventfinder@gmail.com
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 EventFinder. All Rights Reserved.</p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
