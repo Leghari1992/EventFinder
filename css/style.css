@@ -49,14 +49,14 @@ body {
 
 /* Hero Section */
 .hero {
-  background: url("../images/two.jpg") center center / cover no-repeat;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
+  background: url("../images/two.jpg") center center / cover no-repeat;
+  min-height: 60vh;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  padding: 1.5rem 1rem;
 }
 
 .hero::before {
@@ -64,31 +64,35 @@ body {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .hero h1 {
-  position: relative;
-  z-index: 2;
   font-size: 2.8rem;
   font-weight: bold;
-  color: #fff;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
   margin: 0;
-  transform: translateY(35px);
-  margin: 0;
-  padding: 0 1rem;
-  font-size: 2.8rem;
 }
 
-@media (max-width: 480px) {
-  .hero {
-    height: auto;
-    padding: 2rem 1rem;
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
   }
 
-  .hero h1 {
-    font-size: 1.8rem;
-    transform: translateY(20px);
+  .hero p {
+    font-size: 1rem;
   }
 }
 
@@ -189,13 +193,13 @@ body {
 .event-card {
   flex: 0 0 250px;
   max-width: 250px;
-  height: 550px;
+  min-height: 550px;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
 }
 
-/* Card Styles (likely dynamically injected) */
+/* Card Styles */
 .card {
   flex-grow: 1;
   display: flex;
@@ -236,6 +240,7 @@ body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   overflow: hidden;
   padding: 1rem;
 }
