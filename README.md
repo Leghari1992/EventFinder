@@ -12,6 +12,7 @@ EventFinder is a sleek, responsive web application designed to help users discov
 - [Project Structure](#project-structure)
 - [Customization](#customization)
 - [Contributing](#contributing)
+- [License](#license)
 
 ## Introduction
 
@@ -71,5 +72,9 @@ You can customize the project by:
 ## Contributing
 
 Contributions are welcome! Feel free to submit issues or pull requests to improve EventFinder. Please follow standard best practices for commits and code style.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 Thanks for checking out EventFinder! Enjoy exploring and discovering events near you.
