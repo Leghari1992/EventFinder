@@ -86,13 +86,38 @@ body {
   margin-top: 1rem;
 }
 
+/* Adjust hero section height and background on small devices */
 @media (max-width: 768px) {
+  .hero {
+    min-height: 40vh; /* Reduce height from 60vh to 40vh on small screens */
+    padding: 2rem 1rem;
+    background-size: cover; /* already set, but reinforce */
+    background-position: center top; /* focus on top of image */
+  }
+
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 40vh;
+    padding: 2rem 1rem;
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
   }
 }
 
@@ -381,4 +406,15 @@ footer h5 {
     transform: scale(1.05);
     opacity: 1;
   }
+}
+
+#suggestions {
+  z-index: 1050;
+  max-height: 250px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-top: none;
+  width: 100%;
+  text-align: left;
 }

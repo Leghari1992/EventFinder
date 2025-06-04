@@ -85,23 +85,32 @@
     </section>
 
     <!-- Search Section -->
-
     <div class="container">
       <div class="search-section text-center">
         <h3>Find the Perfect Event</h3>
-        <div class="input-group justify-content-center">
-          <span class="input-group-text bg-white" id="search-icon">
-            <i class="bi bi-search"></i>
-          </span>
-          <input
-            type="text"
-            id="searchInput"
-            class="form-control w-50"
-            placeholder="Search events by name..."
-            aria-label="Search events"
-            aria-describedby="search-icon"
-            style="color: #212529; background-color: #fff"
-          />
+
+        <div class="d-flex justify-content-center mt-3">
+          <div class="position-relative w-100" style="max-width: 1000px">
+            <div class="input-group">
+              <span class="input-group-text bg-white" id="search-icon">
+                <i class="bi bi-search"></i>
+              </span>
+              <input
+                type="text"
+                id="searchInput"
+                class="form-control"
+                placeholder="Search events by name..."
+                aria-label="Search events"
+                aria-describedby="search-icon"
+                style="color: #212529; background-color: #fff"
+              />
+            </div>
+            <ul
+              id="suggestions"
+              class="list-group position-absolute w-100 mt-1"
+              style="z-index: 1050"
+            ></ul>
+          </div>
         </div>
       </div>
     </div>

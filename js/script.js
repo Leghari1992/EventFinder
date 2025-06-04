@@ -152,15 +152,42 @@ setInterval(() => {
 }, 4000);
 
 // Initialize rendering and search event listener
-document.addEventListener("DOMContentLoaded", () => {
-  renderEvents(events);
 
+document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
+  const suggestionsBox = document.getElementById("suggestions");
+
+  renderEvents(events); // Render all by default
+
+  // Suggestion logic
   searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase();
-    const filteredEvents = events.filter((event) =>
+    const query = searchInput.value.toLowerCase().trim();
+    suggestionsBox.innerHTML = "";
+
+    if (query === "") return;
+
+    const matches = events.filter((event) =>
       event.name.toLowerCase().includes(query)
     );
-    renderEvents(filteredEvents);
+
+    matches.forEach((event) => {
+      const item = document.createElement("li");
+      item.className = "list-group-item list-group-item-action";
+      item.textContent = event.name;
+      item.style.cursor = "pointer";
+      item.onclick = () => {
+        searchInput.value = event.name;
+        suggestionsBox.innerHTML = "";
+        renderEvents([event]);
+      };
+      suggestionsBox.appendChild(item);
+    });
+  });
+
+  // Hide suggestions if user clicks outside
+  document.addEventListener("click", (e) => {
+    if (!suggestionsBox.contains(e.target) && e.target !== searchInput) {
+      suggestionsBox.innerHTML = "";
+    }
   });
 });
